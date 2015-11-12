@@ -1,0 +1,74 @@
+.form-group {
+  margin-bottom: 10px;
+}
+
+
+
+[type=checkbox], [type=radio] {
+  position: absolute;
+  left: -9999px;
+
+  + label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 2px;
+      color: green;
+    }
+  }
+
+
+}
+
+[type=checkbox] {
+  &:checked {
+    + label {
+      &:after {
+        content: '✔';
+      }
+    }
+  }
+}
+
+[type=radio] {
+  + label {
+    &:before {
+      border-radius: 50%;
+    }
+    &:after {
+      background-color: green;
+      top: 4px;
+      left: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+
+    }
+  }
+
+  &:checked {
+    + label {
+      &:after {
+        content: '';
+      }
+    }
+  }
+
+}
+
+
+
+
